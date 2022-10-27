@@ -766,7 +766,7 @@ stages:
                 - task: AzureWebApp@1
                   displayName: "Deploy the Web App"
                   inputs:
-                      azureSubscription: ${{AZURE_CONNECTION_NAME}}
+                      azureSubscription: AZURE_CONNECTION_NAME
                       appType: "webApp"
                       appName: $(WEBAPP_URL_BASE)
                       package: "$(Build.ArtifactStagingDirectory)/WebApp/*.zip"
